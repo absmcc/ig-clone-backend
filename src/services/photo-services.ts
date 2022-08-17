@@ -5,7 +5,7 @@ import { ObjectId} from 'mongodb'
 interface PhotoServices {
     updateLikes(id: string, inc: number): Promise<Photo>;
     createPhoto(photo: Photo): Promise<string>;
-    createComment(id: string, comment: string): Promise<Photo>;
+    //createComment(id: string, comment: string): Promise<Photo>;
     getAllPhotos(): Promise <Photo[]>;
 }
 const photosCollection = db.collection<Photo>("photos")
@@ -44,16 +44,16 @@ export const updateLikes = async(
 
 
 
-export const createComment =async (id:string, comment: string): Promise<Photo> => {
+//export const createComment =async (id:string, comment: string): Promise<Photo> => {
     
-}
+//}
 
 
 export const photoServices: PhotoServices = 
 { getAllPhotos, 
     createPhoto, 
    updateLikes, 
-   createComment 
+   //createComment 
 }
 
 

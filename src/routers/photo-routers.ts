@@ -15,8 +15,7 @@ photoRouter.post('/',async (req: Request, res: Response) => {
         return;
     }
   const insertedId = await photoServices.createPhoto({
-      photoUrl, description,
-      id: ""
+      photoUrl, description
   });  
   res.status(201).send({ insertedId })
 });

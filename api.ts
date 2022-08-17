@@ -7,7 +7,7 @@ const app = express()
 app.use(cors())
 app.use(express.json())
 
-app.use('/photo',photoRouter)
+app.use('/photos',photoRouter)
 
 const Port = 5001
 app.listen(Port, () => {
